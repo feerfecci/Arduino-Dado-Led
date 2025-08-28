@@ -4,133 +4,142 @@ int numero = 0;
 
 void setup()
 {
-  pinMode(9, INPUT);
-  pinMode(2, OUTPUT);
-  pinMode(3, OUTPUT);
-  pinMode(5, OUTPUT);
-  pinMode(4, OUTPUT);
-  pinMode(8, OUTPUT);
-  pinMode(7, OUTPUT);
-  pinMode(6, OUTPUT);
+
+  int led1 = 2;
+  int led2 = 3;
+  int led3 = 4;
+  int led4 = 5;
+  int led5 = 6;
+  int led6 = 7;
+  int led7 = 8;
+  int botao = 9;
+
+  pinMode(botao, INPUT);
+  pinMode(led1, OUTPUT);
+  pinMode(led2, OUTPUT);
+  pinMode(led4, OUTPUT);
+  pinMode(led3, OUTPUT);
+  pinMode(led7, OUTPUT);
+  pinMode(led6, OUTPUT);
+  pinMode(led5, OUTPUT);
   Serial.begin(9600);
 }
 
 void loop()
 {
   while (digitalRead(9) == HIGH) {
-    digitalWrite(2, LOW);
-    digitalWrite(3, LOW);
-    digitalWrite(4, LOW);
-    digitalWrite(5, LOW);
-    digitalWrite(6, LOW);
-    digitalWrite(7, LOW);
-    digitalWrite(8, LOW);
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+    digitalWrite(led5, LOW);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, LOW);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(2, HIGH);
+    digitalWrite(led1, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(3, HIGH);
+    digitalWrite(led2, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(2, LOW);
-    digitalWrite(5, HIGH);
+    digitalWrite(led1, LOW);
+    digitalWrite(led4, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(3, LOW);
-    digitalWrite(4, HIGH);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(5, LOW);
-    digitalWrite(8, HIGH);
+    digitalWrite(led4, LOW);
+    digitalWrite(led7, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(4, LOW);
-    digitalWrite(7, HIGH);
+    digitalWrite(led3, LOW);
+    digitalWrite(led6, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(8, LOW);
-    digitalWrite(6, HIGH);
+    digitalWrite(led7, LOW);
+    digitalWrite(led5, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(7, HIGH);
+    digitalWrite(led6, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(7, LOW);
-    digitalWrite(6, HIGH);
+    digitalWrite(led6, LOW);
+    digitalWrite(led5, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(6, LOW);
+    digitalWrite(led5, LOW);
     delay(100); // Wait for 100 millisecond(s)
     // caminhovolta
-    digitalWrite(6, HIGH);
+    digitalWrite(led5, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(7, HIGH);
+    digitalWrite(led6, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(8, HIGH);
+    digitalWrite(led7, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(4, HIGH);
+    digitalWrite(led3, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(5, HIGH);
+    digitalWrite(led4, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(3, HIGH);
+    digitalWrite(led2, HIGH);
     delay(100); // Wait for 100 millisecond(s)
-    digitalWrite(2, HIGH);
+    digitalWrite(led1, HIGH);
     delay(300); // Wait for 300 millisecond(s)
-    digitalWrite(2, LOW);
-    digitalWrite(3, LOW);
-    digitalWrite(4, LOW);
-    digitalWrite(5, LOW);
-    digitalWrite(6, LOW);
-    digitalWrite(7, LOW);
-    digitalWrite(8, LOW);
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+    digitalWrite(led5, LOW);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, LOW);
     delay(500); // Wait for 500 millisecond(s)
     numero = random(1, 6 + 1);
     Serial.println(numero);
   }
   if (numero == 2) {
-    digitalWrite(2, LOW);
-    digitalWrite(3, LOW);
-    digitalWrite(4, HIGH);
-    digitalWrite(5, LOW);
-    digitalWrite(6, LOW);
-    digitalWrite(7, LOW);
-    digitalWrite(8, LOW);
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, LOW);
+    digitalWrite(led5, LOW);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, LOW);
   }
   if (numero == 2) {
-    digitalWrite(2, LOW);
-    digitalWrite(3, HIGH);
-    digitalWrite(4, LOW);
-    digitalWrite(5, LOW);
-    digitalWrite(6, LOW);
-    digitalWrite(7, LOW);
-    digitalWrite(8, HIGH);
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+    digitalWrite(led5, LOW);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, HIGH);
   }
   if (numero == 3) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, LOW);
-    digitalWrite(4, HIGH);
-    digitalWrite(5, LOW);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, LOW);
-    digitalWrite(8, LOW);
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, LOW);
+    digitalWrite(led5, HIGH);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, LOW);
   }
   if (numero == 4) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, LOW);
-    digitalWrite(4, LOW);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, LOW);
-    digitalWrite(8, HIGH);
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, HIGH);
+    digitalWrite(led5, HIGH);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, HIGH);
   }
   if (numero == 5) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, LOW);
-    digitalWrite(4, HIGH);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, LOW);
-    digitalWrite(8, HIGH);
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, HIGH);
+    digitalWrite(led5, HIGH);
+    digitalWrite(led6, LOW);
+    digitalWrite(led7, HIGH);
   }
   if (numero == 6) {
-    digitalWrite(2, HIGH);
-    digitalWrite(3, HIGH);
-    digitalWrite(4, LOW);
-    digitalWrite(5, HIGH);
-    digitalWrite(6, HIGH);
-    digitalWrite(7, HIGH);
-    digitalWrite(8, HIGH);
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, HIGH);
+    digitalWrite(led5, HIGH);
+    digitalWrite(led6, HIGH);
+    digitalWrite(led7, HIGH);
   }
-
 }
